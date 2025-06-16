@@ -1,0 +1,21 @@
+:root {
+  --primary-color: #FE68AE;
+  --secondary-color: #0D3B40;
+  --background-color: #E6F0FF;
+  --text-color: #1D3557;
+  --dark-bg: #121212;
+  --dark-card-bg: #151515;
+  --tab-bg: #1b1b1d;
+  --tab-border: #58585a;
+  --white: #ffffff;
+  --light-gray: #dddddd;
+  --gray-faded: #dddddd94;
+  --gray-hover: #8f8f8fc5;
+  --gray-text: #868686;
+  --subtle-gray: #cacaca;
+  --icon-bg: #262626;
+  --gradient-start: #4c00ff;
+  --gradient-end: #7700ff;
+  --black: #000000;
+  --muted-gray: #b7b7b7;
+}
