@@ -1,0 +1,322 @@
+.header {
+  position: fixed;
+  top: 10px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: all 0.4s ease;
+  padding: 10px 0 !important;
+}
+
+.scrolled {
+  background-color: var(--text-color) !important;
+  top: 0 !important;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 40px !important;
+  font-weight: bold;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.menuButton {
+  all: unset;
+  color: var(--text-color);
+  font-size: 35px !important;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuButton:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Mobile Menu */
+.mobileMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--text-color);
+  padding: 20px;
+  z-index: 999;
+}
+
+.mobileMenu.active {
+  display: block;
+}
+
+.navItems {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.navItem {
+  margin: 0;
+}
+
+.navLink {
+  color: var(--gray-text);
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover,
+.navLink.active {
+  color: var(--text-color);
+}
+
+/* Social and Connect Section */
+.socialAndConnect {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 10px;
+}
+
+.socialIcon {
+  background-color: var(--text-color);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 0.8px solid var(--gray-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 20px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.socialIcon i {
+  position: relative;
+  z-index: 2;
+}
+
+.socialIcon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--white);
+  width: 0;
+  height: 0;
+  transition: 0.4s;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.socialIcon:hover {
+  color: var(--text-color) !important;
+}
+
+.socialIcon:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.connectButton {
+  border: 1px solid var(--gray-hover);
+  width: 180px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color) !important;
+  text-decoration: none;
+  position: relative;
+  transition: 0.3s;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.connectButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: var(--text-color);
+  width: 0;
+  transition: 0.4s;
+  z-index: -1;
+}
+
+.connectButton:hover {
+  color: var(--white) !important;
+}
+
+.connectButton:hover::before {
+  width: 100%;
+}
+
+/* Desktop Styles */
+@media (min-width: 992px) {
+  .menuButton {
+    display: none;
+  }
+
+  .mobileMenu {
+    position: static;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    padding: 0;
+    gap: 30px;
+  }
+
+  .navItems {
+    flex-direction: row;
+    margin-bottom: 0;
+    gap: 30px;
+  }
+
+  .socialAndConnect {
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+/* Scrolled Adjustments */
+.header.scrolled .logo,
+.header.scrolled .menuButton,
+.header.scrolled .connectButton {
+  color: var(--white) !important;
+}
+
+.header.scrolled .navLink {
+  color: var(--muted-gray) !important;
+}
+
+.header.scrolled .navLink:hover,
+.header.scrolled .navLink.active {
+  color: var(--white) !important;
+}
+
+.header.scrolled .socialIcon {
+  background-color: var(--white);
+  color: var(--text-color);
+  border: 1px solid var(--gray-faded);
+}
+
+.header.scrolled .connectButton::before {
+  background-color: var(--white);
+}
+
+.header.scrolled .socialIcon::after {
+  background-color: var(--text-color);
+}
+
+.header.scrolled .socialIcon:hover {
+  color: var(--white) !important;
+}
+
+.header.scrolled .connectButton:hover {
+  color: var(--text-color) !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1440px) {
+  .logo {
+    font-size: 35px !important;
+  }
+}
+
+@media (max-width: 990px) {
+  .container {
+    width: 85%;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 90% !important;
+  }
+
+  .connectButton {
+    width: 125px;
+    height: 50px;
+    font-size: 15px !important;
+  }
+
+  .socialIcon {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .logo {
+    font-size: 30px !important;
+  }
+
+  .connectButton {
+    width: 115px;
+    font-size: 14px !important;
+  }
+
+  .socialIcons {
+    gap: 5px;
+  }
+
+  .socialIcon {
+    font-size: 13px;
+  }
+
+  .navLink {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 345px) {
+  .logo {
+    font-size: 22px !important;
+  }
+
+  .navLink {
+    font-size: 15px;
+  }
+
+  .socialIcon {
+    width: 38px;
+    height: 38px;
+    font-size: 8px;
+  }
+
+  .connectButton {
+    width: 85px;
+    height: 40px;
+    font-size: 10px !important;
+  }
+}
