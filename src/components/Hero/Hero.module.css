@@ -1,0 +1,145 @@
+.heroSection {
+  background-image: url('../../assets/images/bg_hero.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 150px 100px;
+  scroll-margin-top: 100px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 2rem;
+  flex-wrap: wrap;
+}
+
+.textContainer {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.welcome {
+  font-size: 1.8rem;
+  background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+  color: var(--white);
+  padding: 0.8rem 1.5rem;
+  display: inline-block;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  line-height: 1.4;
+  font-weight: bold;
+}
+
+.subtitle span {
+  color: var(--primary-color);
+}
+
+.writer-line {
+  display: inline-block;
+  width: 5px;
+  height: 40px;
+  background-color: var(--gray-hover);
+  animation: blink 1s infinite;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.description {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  color: var(--gray-text);
+  line-height: 1.6;
+}
+
+.connectBtn {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 2rem;
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  gap: 10px;
+}
+
+.connectBtn span {
+  transition: 0.4s;
+}
+
+.connectBtn:hover span {
+  margin-right: 7px;
+}
+
+.arrowCircle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.connectBtn:hover .arrowCircle {
+  background-color: rgba(var(--white), 0.3);
+  transform: translateX(5px);
+}
+
+.fa-arrow-right {
+  font-size: 14px;
+}
+
+.heroImage {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: floatUp 3s ease-in-out infinite;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: 2rem;
+  }
+
+  .welcome {
+    font-size: 1.5rem;
+  }
+}
