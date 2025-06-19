@@ -1,6 +1,10 @@
 import TypeWriter from "../TypeWriter/TypeWriter";
 import styles from "./Hero.module.css";
 
+// React Font Awesome imports
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
 const Hero = () => {
   return (
     <section id="home" className={styles.heroSection}>
@@ -27,7 +31,7 @@ const Hero = () => {
           <a href="#contact" className={styles.connectBtn}>
             <span>Let's Connect</span>
             <div className={styles.arrowCircle}>
-              <i className="fa-solid fa-arrow-right"></i>
+              <FontAwesomeIcon icon={faArrowRight} />
             </div>
           </a>
         </div>
