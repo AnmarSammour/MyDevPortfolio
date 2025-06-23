@@ -1,7 +1,7 @@
 :root {
   --primary-color: #FE68AE;
   --secondary-color: #0D3B40;
-  --background-color: #E6F0FF;
+  --background-color: #fbfbfb;
   --text-color: #1D3557;
   --dark-bg: #121212;
   --dark-card-bg: #151515;
@@ -18,4 +18,5 @@
   --gradient-end: #7700ff;
   --black: #000000;
   --muted-gray: #b7b7b7;
+  --card-bg: #FFFCFB;
 }
