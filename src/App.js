@@ -1,6 +1,7 @@
 import { BrowserRouter as Router } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
+import Skills from "./components/Skills/Skills";
 
 import "./App.module.css";
 
@@ -16,11 +17,14 @@ function App() {
     <Router>
       <div>
         <Header onNavigate={scrollToSection} />
-          <main>
-            <section id="home">
-              <Hero />
-            </section>
-          </main>
+        <main>
+          <section id="home">
+            <Hero />
+          </section>
+          <section id="skills">
+            <Skills />
+          </section>
+        </main>
       </div>
     </Router>
   );
