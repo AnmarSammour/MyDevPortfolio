@@ -1,0 +1,94 @@
+
+.skillsSection {
+  background-color: var(--background-color);
+  scroll-margin-top: 200px;
+}
+
+.skillsContainer {
+  background-color: var(--card-bg);
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  border-radius: 35px;
+  transform: translate(0, -8%);
+  padding-bottom: 50px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.sectionTitle {
+  color: var(--text-color) !important;
+  font-size: 60px;
+  text-align: center;
+  padding-top: 30px;
+  margin-bottom: 20px;
+  margin: auto;
+  font-weight: 600;
+}
+
+.sectionSubtitle {
+  color: var(--subtle-gray);
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.customCarousel {
+  width: 70% !important;
+  margin: auto;
+  padding: 100px 0;
+  border-radius: 20px;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Responsive Adjustments */
+
+@media (max-width: 1440px) {
+  .sectionTitle {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 990px) {
+  .sectionTitle {
+    font-size: 45px;
+  }
+  .customCarousel {
+    padding: 80px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .skillsContainer {
+    width: 90%;
+  }
+  .sectionTitle {
+    font-size: 40px;
+  }
+  .customCarousel {
+    padding: 60px 0;
+    width: 85% !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .sectionTitle {
+    font-size: 35px;
+  }
+  .sectionSubtitle {
+    font-size: 14px;
+  }
+  .customCarousel {
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 345px) {
+  .sectionTitle {
+    font-size: 30px;
+  }
+  .sectionSubtitle {
+    font-size: 12px;
+  }
+}
