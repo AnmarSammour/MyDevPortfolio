@@ -24,6 +24,9 @@ function App() {
           <section id="skills">
             <Skills />
           </section>
+          <section id="projects">
+            <Projects />
+          </section>
         </main>
       </div>
     </Router>
