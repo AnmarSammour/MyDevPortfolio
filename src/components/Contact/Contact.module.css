@@ -1,0 +1,243 @@
+.connectSection {
+  scroll-margin-top: 93px;
+  background-color: var(--text-color);
+  padding: 80px 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactImg img {
+  width: 70%;
+  max-width: 500px;
+}
+
+.formWrapper {
+  flex: 1;
+  min-width: 300px;
+  padding: 0 20px;
+}
+
+.connectTitle {
+  color: var(--white);
+  font-size: 2.9rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.connectForm {
+  width: 100%;
+}
+
+.inputRow {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin-bottom: 10px;
+}
+
+
+.inputDivFull {
+  width: 100%;
+  padding: 5px 25px !important;
+
+}
+
+.inputDiv {
+  flex: 1;
+  min-width: 150px;
+  padding: 5px 25px !important;
+}
+
+.connectForm input,
+.connectForm textarea {
+  border: 1px solid var(--gray-hover);
+  /* #dddddd94 */
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  outline: none;
+  transition: 0.5s;
+  padding: 0 20px;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--white);
+  height: 65px;
+  margin-bottom: 8px;
+}
+
+.connectForm textarea {
+  padding: 20px;
+  height: 200px;
+  resize: none;
+}
+
+.connectForm input:focus,
+.connectForm textarea:focus {
+  background-color: var(--white);
+  border: none;
+  color: var(--black);
+}
+
+.connectForm input::placeholder,
+.connectForm textarea::placeholder {
+  color: var(--white);
+  font-weight: 500;
+}
+
+.connectForm input:focus::placeholder,
+.connectForm textarea:focus::placeholder {
+  color: var(--gray-text);
+  /* #868686 */
+}
+
+.submitBtn {
+  border: none;
+  background-color: var(--white);
+  width: 140px;
+  height: 55px;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-left: 25px;
+  display: block;
+  position: relative;
+  transition: 0.3s;
+  border-radius: 30px;
+  border: 1px solid var(--gray-hover);
+  cursor: pointer;
+}
+
+.submitBtn span {
+  position: relative;
+  z-index: 2;
+}
+
+.submitBtn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 0;
+  background-color: var(--secondary-color);
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.submitBtn:hover {
+  color: var(--white);
+}
+
+.submitBtn:disabled:hover {
+  color: var(--black);
+}
+
+.submitBtn:hover::before {
+  width: 100%;
+}
+
+.submitBtn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.submitBtn:disabled:hover::before {
+  width: 0;
+}
+
+.successMessage {
+  color: var(--white);
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1440px) {
+  .connectTitle {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 990px) {
+  .container {
+    width: 85%;
+  }
+}
+
+@media (max-width: 768px) {
+  .connectTitle {
+    font-size: 2.2rem;
+    padding-left: 0;
+  }
+
+  .contactImg {
+    margin: 2rem 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 90% !important;
+  }
+
+  .connectForm input {
+    height: 55px;
+    font-size: 16px;
+  }
+
+  .connectTitle {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .connectTitle {
+    font-size: 1.8rem;
+  }
+
+  .connectForm input,
+  .connectForm textarea {
+    font-size: 15px;
+  }
+
+  .submitBtn {
+    width: 120px;
+    height: 50px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 345px) {
+  .connectTitle {
+    font-size: 1.6rem;
+  }
+
+  .connectForm input {
+    height: 50px;
+  }
+
+  .submitBtn {
+    width: 100px;
+    height: 45px;
+    font-size: 14px;
+  }
+}
