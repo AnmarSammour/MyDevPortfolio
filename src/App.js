@@ -35,6 +35,7 @@ function App() {
             <Contact />
           </section>
         </main>
+        <Footer onNavigate={scrollToSection} />
       </div>
     </Router>
   );
