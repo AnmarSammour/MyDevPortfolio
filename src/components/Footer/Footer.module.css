@@ -1,0 +1,151 @@
+.footer {
+  background-color: var(--text-color); 
+  position: relative;
+  z-index: 0;
+}
+
+.footerContent {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 30px;
+}
+
+.topSection {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 10px;
+}
+
+.iconLink {
+  background-color: var(--icon-bg); 
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 0.8px solid var(--gray-hover); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  font-size: 20px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.iconLink i {
+  position: relative;
+  z-index: 2;
+}
+
+.iconLink::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--white);
+  width: 0;
+  height: 0;
+  transition: 0.4s;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.iconLink:hover {
+  color: var(--black);
+}
+
+.iconLink:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.copyright {
+  color: var(--white);
+  font-size: 18px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 990px) {
+  .footerContent {
+    width: 85%;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 150px 0 20px 0;
+  }
+  .topSection {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .logo {
+    font-size: 35px;
+  }
+  .copyright {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footerContent {
+    width: 90% !important;
+  }
+  .iconLink {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+  .copyright {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .logo {
+    font-size: 30px;
+  }
+  .iconLink {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+  .copyright {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 345px) {
+  .logo {
+    font-size: 28px;
+  }
+  .iconLink {
+    width: 38px;
+    height: 38px;
+    font-size: 14px;
+  }
+  .copyright {
+    font-size: 12px;
+  }
+}
