@@ -110,19 +110,11 @@ This project is a personal portfolio website built using React.js to showcase sk
         ```bash
         npm install
         ```
-        Or if you are using Yarn:
-        ```bash
-        yarn install
-        ```
 
 3.  **Run the Local Server**:
     *   After installing dependencies, run the command:
         ```bash
         npm start
-        ```
-        Or:
-        ```bash
-        yarn start
         ```
     *   The site will automatically open in the browser at `http://localhost:3000`.
 
