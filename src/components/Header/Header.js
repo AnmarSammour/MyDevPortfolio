@@ -1,17 +1,11 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Header.module.css";
 
-// React Font Awesome imports
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedinIn, faGithub, faBehance, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeTab, setActiveTab] = useState("home");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Detect scroll to apply scrolled styles
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
@@ -27,34 +21,27 @@ const Header = () => {
   const handleNavClick = (tab) => {
     setActiveTab(tab);
     setIsMobileMenuOpen(false);
-    console.log(`Navigating to ${tab} section`);
   };
 
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.container}>
-        {/* Logo */}
         <a
-          href="#"
+          href="#home"
           className={styles.logo}
-          onClick={(e) => {
-            e.preventDefault();
-            handleNavClick("home");
-          }}
+          onClick={() => handleNavClick("home")}
         >
           Portfolio
         </a>
 
-        {/* Mobile Menu Toggle Button */}
         <button
           className={styles.menuButton}
           onClick={toggleMobileMenu}
           aria-label="Toggle navigation"
         >
-          <FontAwesomeIcon icon={isMobileMenuOpen ? faTimes : faBars} />
+          <i className={`fas ${isMobileMenuOpen ? "fa-times" : "fa-bars"}`}></i>
         </button>
 
-        {/* Mobile Navigation Menu */}
         <div
           className={`${styles.mobileMenu} ${
             isMobileMenuOpen ? styles.active : ""
@@ -63,92 +50,79 @@ const Header = () => {
           <ul className={styles.navItems}>
             <li className={styles.navItem}>
               <a
-                href="#"
+                href="#home"
                 className={`${styles.navLink} ${
                   activeTab === "home" ? styles.active : ""
                 }`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick("home");
-                }}
+                onClick={() => handleNavClick("home")}
               >
                 Home
               </a>
             </li>
             <li className={styles.navItem}>
               <a
-                href="#"
+                href="#skills"
                 className={`${styles.navLink} ${
                   activeTab === "skills" ? styles.active : ""
                 }`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick("skills");
-                }}
+                onClick={() => handleNavClick("skills")}
               >
                 Skills
               </a>
             </li>
             <li className={styles.navItem}>
               <a
-                href="#"
+                href="#projects"
                 className={`${styles.navLink} ${
                   activeTab === "projects" ? styles.active : ""
                 }`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick("projects");
-                }}
+                onClick={() => handleNavClick("projects")}
               >
                 Projects
               </a>
             </li>
           </ul>
 
-          {/* Social Icons & Connect Button */}
           <div className={styles.socialAndConnect}>
             <div className={styles.socialIcons}>
               <a
-                href="https://www.linkedin.com/in/anmarsammour" 
+                href="https://www.linkedin.com/in/anmarsammour"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.socialIcon}
               >
-                <FontAwesomeIcon icon={faLinkedinIn} />
+                <i className="fab fa-linkedin-in"></i>
               </a>
               <a
-                href="https://github.com/AnmarSammour" 
+                href="https://github.com/AnmarSammour"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.socialIcon}
               >
-                <FontAwesomeIcon icon={faGithub} />
+                <i className="fab fa-github"></i>
               </a>
               <a
-                href="https://www.behance.net/anmarsammour" 
+                href="https://www.behance.net/anmarsammour"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.socialIcon}
               >
-                <FontAwesomeIcon icon={faBehance} />
+                <i className="fab fa-behance"></i>
               </a>
               <a
-                href="https://wa.me/+970595351929" 
+                href="https://wa.me/+970595351929"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.socialIcon}
               >
-                <FontAwesomeIcon icon={faWhatsapp} />
+                <i className="fab fa-whatsapp"></i>
               </a>
             </div>
 
             <a
-              href="#"
+              href="#contact"
               className={styles.connectButton}
-              onClick={(e) => {
-                e.preventDefault();
-                handleNavClick("contact");
-              }}
+              onClick={() => setIsMobileMenuOpen(false)}
             >
               Let's Connect
             </a>
