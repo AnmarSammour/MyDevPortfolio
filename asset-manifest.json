@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/MyDevPortfolio/static/css/main.dd90ba6e.css",
+    "main.js": "/MyDevPortfolio/static/js/main.2db13bca.js",
+    "static/js/453.e93318e4.chunk.js": "/MyDevPortfolio/static/js/453.e93318e4.chunk.js",
+    "static/media/bootstrap.png": "/MyDevPortfolio/static/media/bootstrap.c92a21f4268abeca05f2.png",
+    "static/media/learnapp.png": "/MyDevPortfolio/static/media/learnapp.869d318121324499b75f.png",
+    "static/media/bg_hero.png": "/MyDevPortfolio/static/media/bg_hero.66e77cc3687c2587d7c9.png",
+    "static/media/quranweb.png": "/MyDevPortfolio/static/media/quranweb.8585d08eeb6b5a3fe581.png",
+    "static/media/connect.png": "/MyDevPortfolio/static/media/connect.e0fb2df8eb1df457ee61.png",
+    "static/media/webFrontEnd.png": "/MyDevPortfolio/static/media/webFrontEnd.67933a17e0b449fa5dae.png",
+    "static/media/iceCreamApp.png": "/MyDevPortfolio/static/media/iceCreamApp.1f988cf5486956feb881.png",
+    "static/media/chatapp.png": "/MyDevPortfolio/static/media/chatapp.52504cf8650acb6a6219.png",
+    "static/media/revicons.eot": "/MyDevPortfolio/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/MyDevPortfolio/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/MyDevPortfolio/static/media/revicons.e8746a624ed098489406.woff",
+    "index.html": "/MyDevPortfolio/index.html",
+    "main.dd90ba6e.css.map": "/MyDevPortfolio/static/css/main.dd90ba6e.css.map",
+    "main.2db13bca.js.map": "/MyDevPortfolio/static/js/main.2db13bca.js.map",
+    "453.e93318e4.chunk.js.map": "/MyDevPortfolio/static/js/453.e93318e4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dd90ba6e.css",
+    "static/js/main.2db13bca.js"
+  ]
+}
