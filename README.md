@@ -5,6 +5,12 @@ This project is a personal portfolio website built using React.js to showcase sk
 
 ---
 
+## **Live Preview**
+You can view the live version of the portfolio at the following link:
+**[https://anmarsammour.github.io/MyDevPortfolio/](https://anmarsammour.github.io/MyDevPortfolio/ )**
+
+---
+
 ## **Project Structure**
 ### **Main Files and Folders**
 1.  **`src/`**
